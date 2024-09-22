@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap">
+    <title>Virtual Try-On App</title>
+</head>
+<body id="body">
+    <div id="full-page">
+        <section id="hero">
+            <div class="container">
+                <h3 style="line-height: 2.1;">CHIDINMA OHAM (19CJ025818) <br> PRESENTS </h3>
+                <h1>A Virtual Try-On System for Persons With Reduced Mobility</h1>
+                <p>Deep learning meets fashion in just two steps!</p>
+                <button id="tryOnButton">Try it now!</button>
+            </div>
+            <div class="hero-img">
+                <img src="VTO IMAGE.png" alt="hero-img" id="hero-img">
+            </div>
+        </section> 
+        <section id="main-section">
+            <div class="img-upload">
+                <h3>Step 1: Upload a high quality image of yourself</h3>
+                <div class="img-upload-dtls">
+                    <p>For best results:</p>
+                    <ul id="guide-list">
+                        <li>Ensure hair is pulled away from face and shoulders</li>
+                        <li>Keep fingers tucked away as much as possible</li>
+                        <li>Wear similar clothing to what you wish to try on
+                            <br>
+                           <span class="bracket">(wear a top if you wish to try on a top)</span> 
+                            <br>
+                           <span class="bracket">(wear a dress if you wish to try on a dress)</span> 
+                        </li>
+                    </ul>
+                    <p>
+                        Not sure what to upload?
+                        <a href="" id="ref-hum-img">Click Here</a> 
+                        for reference images
+                    </p>
+                </div>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" name="human_img" accept="image/*" class="picinput" required>
+                </form>
+            </div>
+            <div class="cloth-upload">
+                <h3>Step 2: Upload an image of the garment you wish to try on</h3>
+                <p>
+                    Not sure what to upload?
+                    <a href="" id="ref-clo-img">Click Here</a> 
+                    for reference images
+                </p>
+                <form id="uploadForm">
+                    <input type="file" name="garm_img" accept="image/*" class="picinput" required>
+                    <span id="selected-garment" style="display: none;"></span>
+                </form>
+                <p style="text-align: center; font-size: x-large;"  id="ward-sel"> OR
+                    <br>
+                    <button id="recommend" class="button">Select from wardrobe</button>
+                    <p style="visibility: hidden;" id="hiddenInfo">Wardrobe image selected</p>
+                </p>              
+                
+            </div>        
+        </section>
+        <div class="SubmitButtonContainer">
+            <button id="SubmitButton">Submit</button>
+        </div>
+        <section id="footer" style="text-align: center;">
+            <p>Copyright | Chidinma Oham | All rights reserved</p>
+        </section>
+    </div>
+    <div id="loadingMessage" style="display: none;">
+        <p id="loadingMessageP" style="visibility: hidden;">first element</p>
+        <h1 id="loadingMessageh1">This will take about a minute</h1>
+        <h3>Please hold on. It's worth the wait!</h3>
+        <h1 id="countdown">60</h1>
+    </div>
+    <h1 </h1>
+    <!-- Human Image Modal -->
+    <div id="humanModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="model-content-img">
+                <img src="/modelref1.png" alt="ref-img-1" class="hum-model">
+                <img src="/modelref2.jpg" alt="ref-img-2" class="hum-model">
+                <img src="/modelref3.png" alt="ref-img-3" class="hum-model">
+            </div>
+        </div>
+    </div>
+
+    <!-- Cloth Image Modal -->
+    <div id="clothModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="model-content-img">
+                <img src="/clothref1.jpg" alt="ref-img-1" class="hum-model">
+                <img src="/clothref2.jpg" alt="ref-img-2" class="hum-model">
+                <img src="/clothref3.jpg" alt="ref-img-3" class="hum-model">
+            </div>
+        </div>
+    </div>
+    <!-- Recommendation Modal -->
+    <div id="recommendModal" class="modal">
+        <div class="modal-content recommend-modal">
+            <span class="close">&times;</span>
+            <div class="recommend-content">
+                <!-- Images will be dynamically added here using JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="/vto.js"></script>
+</body>
+</html>

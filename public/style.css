@@ -1,0 +1,306 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  background-color: #ffffff;
+  position: relative;
+}
+button {
+  cursor: pointer;
+}
+a{
+  color: #fff;
+}
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 35px;
+}
+.container {
+  text-align: center;
+  flex: 60%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+#hero-img {
+  width: 500px;
+}
+.upload-section {
+  display: block;
+}
+#main-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: #83524d;
+    color: #fff;
+   
+}
+#main-section h3 {
+  text-align: center;
+}
+.img-upload-dtls {
+  margin-left: 70px;
+}
+.img-upload {
+  flex: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.cloth-upload {
+  flex: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  line-height: 3.4;
+  padding: 30px 0;
+  padding-bottom: 0;
+  text-align: center;
+  background-color: #8b865c;
+}
+#guide-list{
+  line-height: 2.5;
+}
+.bracket{
+  margin-left: 35px;
+}
+#uploadForm {
+  text-align-last: center;
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+p#garmImgInfo, #hiddenInfo{
+  font-size: medium;
+  margin-bottom: 0;
+  line-height: 0;
+}
+button#tryOnButton,
+#SubmitButton {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #83524d;
+  font-family: inherit;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button#tryOnButton:hover,
+#SubmitButton:hover {
+  background-color: #a06b66;
+}
+.SubmitButtonContainer {
+  margin-top: 60px;
+  text-align-last: center;
+}
+#footer {
+  padding: 100px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+#footer p{
+  font-size: small;
+}
+#loadingMessage{
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 3;
+  background-color: #fff;
+  width: 100%; height: 100%;
+  overflow-y: hidden;
+  text-align: center;
+  font-family: Jost, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #83524d;
+ 
+}
+
+/* Style for the main heading */
+#loadingMessage h1 {
+  margin: 10px 0;
+  padding-top: 3%;
+}
+
+/* Style for the countdown number */
+#countdown {
+  font-size: 11rem; /* Makes the countdown number big */
+  font-weight: bold; /* Makes the countdown number bold */
+  color: #83524d; /* Adjust the color as needed */
+}
+
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    animation: fadeIn 0.5s;
+}
+
+/* Modal content */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: max-content;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slideDown 0.5s;
+}
+.hum-model{
+  max-width: 250px;
+  height: 358px;
+  padding: 15px;
+}
+#model-content-img{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+/* Add this new style for the recommendation modal */
+#recommend{
+    background-color: #ffffff;
+    color: #8b865c;
+    border: 2px solid #8b865c;
+    padding: 6px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Jost, sans-serif;
+}
+
+#recommend:hover {
+    background-color: #f0f0f0;
+}
+
+.recommend-modal {
+  justify-content: center;
+  align-items: center;
+}
+
+.recommend-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  max-width: 700px;
+  max-height: 500px;
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+.recommend-content img {
+    max-width: 100%;
+    height: 220px;
+    border-radius: 5px;
+    width: 160px;
+    cursor: pointer;
+}
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { top: 40%; opacity: 0; }
+    to { top: 50%; opacity: 1; }
+}
+
+/* Ensure the result container takes up the full viewport height */
+/* Ensure the result container takes up the full viewport height */
+#result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  font-family: 'Jost', sans-serif;
+}
+
+#result-head {
+  text-align: center;
+  padding: 20px;
+}
+#result-head h1, a.target,#result-head p {
+  font-family: 'Jost', sans-serif;
+}
+#result-head .actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#result-head .actions .button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #83524d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-family: 'Jost', sans-serif;
+}
+
+#result-head .actions .button:hover {
+  background-color: #a06b66;
+}
+
+.result-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+.result-container p{
+  font-size: 11rem; /* Makes the countdown number big */
+  font-size: xxx-large;
+  font-weight: bold; /* Makes the countdown number bold */
+  color: #83524d; /* Adjust the color as needed */
+}
+.result-image-container {
+  flex: 1;
+  max-width: 300px; /* Adjust the width as needed */
+  text-align: center;
+  height: fit-content;
+}
+
+.result-img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
