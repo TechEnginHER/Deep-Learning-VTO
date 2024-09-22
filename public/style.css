@@ -304,3 +304,47 @@ button#tryOnButton:hover,
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+@media (max-width: 960px) {
+  #hero{
+    display: block;
+  }
+  #hero-img{
+    width: 90vw;
+  }
+  #main-section{
+    display: block;
+  }
+  .img-upload-dtls{
+    margin-left: 0;
+    text-align: center;
+  }
+  .img-upload{
+    padding: 8px 18px 19px;
+  }
+  .cloth-upload{
+    line-height: 2.5;
+  }
+  .SubmitButtonContainer{
+    margin-top: 0;
+  }
+  #footer{
+    padding: 0;
+  }
+  .modal-content{
+    width: 90vw;
+  }
+  #modal-content-img{
+    flex-wrap: wrap;
+  }
+  .hum-model{
+    height: 200px;
+  }
+  #guide-list{
+    list-style-type: none;
+    padding-inline-start: inherit;
+  }
+  .bracket{
+    margin-left: 0;
+  }
+
+}
