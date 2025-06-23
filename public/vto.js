@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function populateRecommendations() {
       var recommendContent = document.querySelector('.recommend-content');
       recommendContent.innerHTML = '';
-      for (var i = 1; i <= 36; i++) { // Assuming you want 36 images (6 rows x 6 columns)
+      for (var i = 1; i <= 10; i++) { // Assuming you want 36 images (6 rows x 6 columns)
           var img = document.createElement('img');
           img.src = '/wardrobe' + i + '.jpg'; // Update with your image path
           img.alt = 'Wardrobe item ' + i;
